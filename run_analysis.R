@@ -54,5 +54,6 @@ tbl_allReqData <- cbind(tbl_subject, tbl_ytrain_ytest, tbl_xtrain_xtest)
 tbl_TidyData <- aggregate(. ~SubjectID + Activity,tbl_allReqData, mean)
 tbl_TidyData <- tbl_TidyData[order(tbl_TidyData$SubjectID, tbl_TidyData$Activity),]
 
+write.table(tbl_TidyData, "tidyData.txt")
 
   
